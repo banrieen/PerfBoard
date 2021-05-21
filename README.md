@@ -4,21 +4,6 @@
 
 -----------
 
-[![MIT licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
-[![Documentation Status](https://readthedocs.org/projects/machinewolf/badge/?version=latest)](https://machinewolf.readthedocs.io/en/latest/?badge=latest)
-<!-- ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/apulis/MachineWolf) -->
-![Issues track](https://img.shields.io/github/issues/apulis/MachineWolf)
-[![Gitter](https://badges.gitter.im/banrieen/MachineWolfHome.svg)](https://gitter.im/banrieen/MachineWolfHome?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-[![codecov](https://codecov.io/gh/banrieen/MachineWolf/branch/master/graph/badge.svg?token=G8VGS1DTR4)](https://codecov.io/gh/banrieen/MachineWolf)
-[![Travis](https://www.travis-ci.com/banrieen/MachineWolf.svg?branch=master)](https://www.travis-ci.com/banrieen/MachineWolf)
-[![Nightly-Build](https://github.com/banrieen/MachineWolf/actions/workflows/CI-Nightly.yml/badge.svg)](https://github.com/banrieen/MachineWolf/actions/workflows/CI-Nightly.yml)
-![Docker Pulls](https://img.shields.io/docker/pulls/banrieen/machinewolf)
-![Docker Image Version (latest by date)](https://img.shields.io/docker/v/banrieen/machinewolf)
-
-<!-- ![GitHub Latest download](https://img.shields.io/github/downloads/apulis/MachineWolf/latest/total?style=plastic) -->
-<!-- [![codeql-analysis Actions Status](https://github.com/apulis/MachineWolf/workflows/codeql-analysis/badge.svg)](https://github.com/apulis/MachineWolf/actions)
-[![nightly-build Actions Status](https://github.com/apulis/MachineWolf/workflows/nightly-build/badge.svg)](https://github.com/apulis/MachineWolf/actions) -->
-
 
 [English Doc](README.md) | [简体中文](README_zh_CN.md)
 
