@@ -3,7 +3,7 @@
 </p>
 
 
-**MachineWolf** will not support any more, Please goint and view the **[MachineDevil](https://github.com/banrieen/MachineDevil) project.**
+MachineWolf is transferred to the new project **[MachineDevil](https://github.com/banrieen/MachineDevil) project., Please goto and view**
 
 
 -----------
