@@ -2,10 +2,11 @@
 <img src="docs/static/ico.png" width="150"/>
 </p>
 
+
+**MachineWolf** will not support any more, Please goint and view the **[MachineDevil](https://github.com/banrieen/MachineDevil) project.**
+
+
 -----------
-
-
-[English Doc](README.md) | [简体中文](README_zh_CN.md)
 
 **MachineWolf** is a Test Studio for AI 、Deep Learning or Machine Learning framwork、platform.
 
