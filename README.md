@@ -3,7 +3,7 @@
 </p>
 
 
-MachineWolf is transferred to the new project **[MachineDevil](https://github.com/banrieen/MachineDevil) project., Please goto and view**
+MachineWolf is transferred to the new project **[MachineDevil](https://github.com/banrieen/MachineDevil) . Please goto and view**
 
 
 -----------
