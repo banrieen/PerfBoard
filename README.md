@@ -12,26 +12,33 @@ MachineWolf is transferred to the new project **[MachineDevil](https://github.co
 
 ### Quickly Start
 
-* Runing script at local PC
-
-    ```bash
-    sudo chmod +x init_dev.sh
-    bash ./init_dev.sh
-    locust -f ./example/locust/test_http.py --conf ./example/locust/host.conf
-    ```
 
 * Execute testsuites in docker container
 
     1. Pull the images from docker-hub
     
-    `docker pull banrieen/machinewolf`
+        `docker pull banrieen/machinewolf`
 
     2. Start container
     
+        While, If you could not find the project, just click "Ctrl+K Crtl+O" open the folder `/home/MachineWolf`
+
+        ```bash
+        docker run -d  -p 8088:8080  -p 8090:8090   --name "machinewolf"  -v "${PWD}:/home/MachineWolf"  --env NOTEBOOK_ARGS="--NotebookApp.notebook_dir=/home/MachineWolf"  --shm-size 2048m  --restart always   banrieen/machinewolf:latest
+        # Open web IDE VS Code
+        # http://<xxx.xxx.xxx.xxx>:8088/tools/vscode/
+        ```
+
+    3. View and debug testcase
+    
+        ![create-teatcases](docs/static/createtestcase.png)
+
+* Runing script at local PC (Not Suggest)
+
     ```bash
-    docker run -d     -p 8088:8080  -p 8090:8090     --name "ml-workspace"  -v "${PWD}:/workspace"  --env NOTEBOOK_ARGS="--NotebookApp.notebook_dir=/home"  --shm-size 2048m  --restart always     banrieen/machinewolf:latest
-    # Open web IDE
-    # http://<xxx.xxx.xxx.xxx>:8088 
+    sudo chmod +x init_dev.sh
+    bash ./init_dev.sh
+    locust -f ./example/locust/test_http.py --conf ./example/locust/host.conf
     ```
 
 * Running locust scripts by taurus
@@ -74,18 +81,18 @@ There are still some examples that need to be improved and supplemented.
 ``` direction
 |-- testhub/
     `-- testscheme
-        |-- 5g_manufacturing
-        |-- annotations_cvat
+        |-- manufacturing
+        |-- annotations
     `-- testsuites
-        |-- annotations_cvat
+        |-- annotations
             |-- host.conf
             |-- test_cvat_suites.py
             |-- datas.yaml
         |-- dlws
-        |-- e2e_aiarts
-        |-- ha_aiarts
+        |-- e2e
+        |-- ha
         |-- jobmanager
-        |-- songshanhu
+        |-- qip
     `-- testlib
         |-- fake_users
         |-- postgres_client
@@ -105,14 +112,5 @@ In order to avoid information leaks, invalid information floods.
     + link： `<LINKTYPE>:<LINKADDRESS>`
     + cert： `<KEYGEN> 或 <TOKEN>`
     + email： `<EMAIL-NAME@EMAIL-SERVICE.COM>`
-
-
-**Please refer to the release notes for details[RELEASE](./RELEASE.md)。**
-
-### License
-
-[MIT](LICENSE)
-
-### Comunity
 
 

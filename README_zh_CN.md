@@ -12,26 +12,31 @@ MachineWolf 已经转移到 MachineDevil[https://github.com/banrieen/MachineDevi
 
 ### 快速使用指导
 
+* 在docker环境中执行testsuites
+
+    1. 拉取已经编译好的镜像
+    
+        `docker pull banrieen/machinewolf`
+
+    2. 执行docker
+    
+        如果找不到测试脚本，可以使用快捷键"Ctrl+K Crtl+O"打开`/home/MachineWolf`
+        ```bash
+        docker run -d  -p 8088:8080  -p 8090:8090   --name "machinewolf"  -v "${PWD}:/home/MachineWolf"  --env NOTEBOOK_ARGS="--NotebookApp.notebook_dir=/home/MachineWolf"  --shm-size 2048m  --restart always   banrieen/machinewolf:latest
+        # Open web IDE VS Code
+        # http://<xxx.xxx.xxx.xxx>:8088/tools/vscode/
+        ```
+
+    3. 查看和调试测试脚本
+    
+        ![create-teatcases](docs/static/createtestcase.png)
+
 * 在本地执行测试脚本
 
     ```bash
     sudo chmod +x init_dev.sh
     bash ./init_dev.sh
     locust -f ./example/locust/test_http.py --conf ./example/locust/host.conf
-    ```
-
-* 在docker环境中执行testsuites
-
-    1. 拉取已经编译好的镜像
-    
-    `docker pull banrieen/machinewolf`
-
-    2. 执行docker
-    
-    ```bash
-    docker run -d     -p 8088:8080  -p 8090:8090     --name "ml-workspace"  -v "${PWD}:/workspace"  --env NOTEBOOK_ARGS="--NotebookApp.notebook_dir=/home"  --shm-size 2048m  --restart always     banrieen/machinewolf:latest
-    # 打开jupyterlab
-    # http://<xxx.xxx.xxx.xxx>:8088 
     ```
 
 * 使用taurus执行locust脚本
@@ -73,18 +78,18 @@ MachineWolf 已经转移到 MachineDevil[https://github.com/banrieen/MachineDevi
 ``` direction
 |-- testhub/
     `-- testscheme
-        |-- 5g_manufacturing
-        |-- annotations_cvat
+        |-- manufacturing
+        |-- annotations
     `-- testsuites
-        |-- annotations_cvat
+        |-- annotations
             |-- host.conf
             |-- test_cvat_suites.py
             |-- datas.yaml
         |-- dlws
-        |-- e2e_aiarts
-        |-- ha_aiarts
+        |-- e2e
+        |-- ha
         |-- jobmanager
-        |-- songshanhu
+        |-- qip
     `-- testlib
         |-- fake_users
         |-- postgres_client
